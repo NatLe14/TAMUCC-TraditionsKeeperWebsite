@@ -89,6 +89,7 @@
     <Content Include="images\IslanderLights.PNG" />
     <Content Include="images\izzystd.jpg" />
     <Content Include="images\TK_Logo.png" />
+    <Content Include="images\TK_Logo_Transparent.png" />
     <Content Include="Login.aspx" />
     <Content Include="Prizes.aspx" />
     <Content Include="Profile.aspx" />

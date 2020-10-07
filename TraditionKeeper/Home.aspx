@@ -36,13 +36,13 @@
                                 <li  class="nav-item nav-link "><a href="Prizes.aspx"class="text-white">Prizes</a></li>
                             </ul>
 
-                            <ul class="navbar-nav" >
-                                <li class="nav-item">
-                                    <a class="navbar-brand px-lg-4 " href="Home.aspx">
-                                        <img src="images/TK_Logo.png" class="img-thumbnail" style="align-content:center" width="150" height="75" />
-                                    </a>
-                                </li>
-                            </ul>
+                    <ul class="navbar-nav" >
+                       <li class="nav-item">
+                          <a class="navbar-brand px-lg-4 " href="Home.aspx">
+                             <img src="images/TK_Logo.png" class="img-thumbnail" style="align-content:center" width="150" height="75" />
+                          </a>
+                       </li>
+                    </ul>
 
                             <ul class="navbar-nav justify-content-end">
                                     <!-- Login area to have the Login Button and Logout Button and Edit Button for Admin use -->
@@ -52,11 +52,11 @@
 			                            <asp:Button ID="btnLogin" runat="server" OnClick="btnLogin_Click" Text="Login" CssClass="btn btn-success"/>
                                     </li>
                                     <li class="nav-item">
-                                         <!-- Edit Button -->
-					                    <asp:Button ID="btnEdit" runat="server" Text="Edit Database" OnClick="btnEdit_Click" Visible="False"  CssClass="btn btn-info" />
+                                        <!-- Edit Button -->
+					                    <asp:Button ID="btnEdit" runat="server" Text="Edit Database" OnClick="btnEdit_Click" Visible="False" />
                                         <!-- Logout Button -->
                                         <asp:Label ID="lblHelloUser" runat="server" Text="Hello, "></asp:Label>
-				                        <asp:Button ID="btnLogout" runat="server" Text="Logout" OnClick="btnLogout_Click"  CssClass="btn btn-success" />
+				                        <asp:Button ID="btnLogout" runat="server" Text="Logout" OnClick="btnLogout_Click" />
                                     </li>
                             </ul>
                     
@@ -85,68 +85,49 @@
             
         </div>
         
-            <!-- Home Title -->
+        <!-- Home Title -->
         <section id="body">
-            <div class="container">
-                <h1><br /><br /><br /></h1>
-                <div id="Home_Title" class="row align-items">
-                
-                    <div class="col-lg-7">
-                        <img class="img-fluid rounded mb-4 mb-lg-0" src="images/izzystd.jpg" width="400" height="400" alt="">
-                      </div>
-                      <!-- /.col-lg-8 -->
-                      <div class="col-lg-5">
-                        <h1 class="font-weight-light">Welcome!</h1>
-                        <p>This is a template that is great for small businesses. It doesn't have too much fancy flare to it, but it makes a great use of the standard Bootstrap core components. Feel free to use this template for any project you want!</p>
-                        
-                      </div>
+            <div id="Home_Title">
+                <h2><br /><br /><br /><br /><br /></h2>
+                <div id="banner">
+						<div class="container">
+							<div class="row row-no-gutters">
+								<div class="col-sm-8" >
 
-                
-                </div>
+									<!-- Banner Copy -->
+									<h1>Welcome!</h1>	
+                                    <p>This book will serve as your guide for your journey at Texas A&M University of Corpus Christi. Appreciate and uphold the traditions: you are now the keeper of the TAMU-CC legacy! That’s right, you can become a Tradition Keeper simply by taking part in the traditions listed in this book. Carry your book with pride and heed the call to keep our traditions alive. Your Islander Forever family is counting on you to remember its story and create one of your own. Use this book to commemorate your experiences along the way. Your future at the university by the sea awaits!</p>
+										
+							    </div>
+
+								
+								<div class="col-sm-4">
+
+									<!-- Banner Image -->
+										<a  class="rounded"><img src="images/izzystd.jpg" alt="" height="400" /></a>
+
+								</div>
+							</div>
+						</div>
+					</div>
             </div>
-                <h1><br /><br /></h1>
-            <div class="row">
-                
-      <div class="col-md-4 mb-5">
-        <div class="card h-100">
-          <div class="card-body">
-            <h2 class="card-title">Card One</h2>
-            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem magni quas ex numquam, maxime minus quam molestias corporis quod, ea minima accusamus.</p>
-          </div>
-          <div class="card-footer">
-            <a href="#" class="btn btn-primary btn-sm">More Info</a>
-          </div>
-        </div>
-      </div>
-      <!-- /.col-md-4 -->
-      <div class="col-md-4 mb-5">
-        <div class="card h-100">
-          <div class="card-body">
-            <h2 class="card-title">Card Two</h2>
-            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod tenetur ex natus at dolorem enim! Nesciunt pariatur voluptatem sunt quam eaque, vel, non in id dolore voluptates quos eligendi labore.</p>
-          </div>
-          <div class="card-footer">
-            <a href="#" class="btn btn-primary btn-sm">More Info</a>
-          </div>
-        </div>
-      </div>
-      <!-- /.col-md-4 -->
-      <div class="col-md-4 mb-5">
-        <div class="card h-100">
-          <div class="card-body">
-            <h2 class="card-title">Card Three</h2>
-            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem magni quas ex numquam, maxime minus quam molestias corporis quod, ea minima accusamus.</p>
-          </div>
-          <div class="card-footer">
-            <a href="#" class="btn btn-primary btn-sm">More Info</a>
-          </div>
-        </div>
-      </div>
-      <!-- /.col-md-4 -->
-
-    </div>
         </section>
-        
+
+        <!-- Body section to have highlights of different sections -->
+        <!-- NOTE: For design, would like the divs to be side by side horizontal -->
+        <div id="Home_Body" class="container-fluid">
+            
+            <!-- Highlight Section 1 -->
+            <div id="Home_Body_Section1" class="text-body">
+                <img src="/images/IslanderLights.png" />
+				<asp:Label ID="lblHighlight1" runat="server" Text="[Text about first highlight]"></asp:Label>
+            </div>
+
+            <!-- Highlight Section 2 -->
+            <div id="Home_Body_Section2">
+                <img src="/images/IslanderLights.png" />
+				<asp:Label ID="lblHighlight2" runat="server" Text="[Text about second highlight]"></asp:Label>
+            </div>
 
         
     	<asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:TraditionKeeperConnectionString %>" SelectCommand="SELECT * FROM [User]"></asp:SqlDataSource>
