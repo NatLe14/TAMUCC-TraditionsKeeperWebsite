@@ -70,6 +70,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="assets\main.css" />
+    <Content Include="assets\StyleSheet1.css" />
     <Content Include="Buildings.aspx" />
     <Content Include="Content\bootstrap-grid.css" />
     <Content Include="Content\bootstrap-grid.min.css" />

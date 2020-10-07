@@ -27,13 +27,13 @@
                 
                     <nav class="navbar fixed-top justify-content-between" style="background-color:#0067C5">
             
-                            <ul class="nav nav-pills">
+                            <ul class="nav">
                                 <li  class="nav-item nav-link active"><a href="Home.aspx" class="text-white"><i class="fa fa-home"></i>Home</a></li>
-                                <li  class="nav-item nav-link "><a href="Home.aspx" class="text-white"><i class="fa fa-user"></i>Profile</a></li>
-                                <li  class="nav-item nav-link "><a href="Home.aspx"class="text-white">Traditions</a></li>
-                                <li  class="nav-item nav-link "><a href="Home.aspx"class="text-white">History</a></li>
-                                <li  class="nav-item nav-link "><a href="Home.aspx"class="text-white">Buildings</a></li>
-                                <li  class="nav-item nav-link "><a href="Home.aspx"class="text-white">Prizes</a></li>
+                                <li  class="nav-item nav-link "><a href="Profile.aspx" class="text-white"><i class="fa fa-user"></i>Profile</a></li>
+                                <li  class="nav-item nav-link "><a href="Traditions.aspx"class="text-white">Traditions</a></li>
+                                <li  class="nav-item nav-link "><a href="History.aspx"class="text-white">History</a></li>
+                                <li  class="nav-item nav-link "><a href="Buildings.aspx"class="text-white">Buildings</a></li>
+                                <li  class="nav-item nav-link "><a href="Prizes.aspx"class="text-white">Prizes</a></li>
                             </ul>
 
                             <ul class="navbar-nav" >
@@ -52,11 +52,11 @@
 			                            <asp:Button ID="btnLogin" runat="server" OnClick="btnLogin_Click" Text="Login" CssClass="btn btn-success"/>
                                     </li>
                                     <li class="nav-item">
-                                        <!-- Edit Button -->
-					                    <asp:Button ID="btnEdit" runat="server" Text="Edit Database" OnClick="btnEdit_Click" Visible="False" />
+                                         <!-- Edit Button -->
+					                    <asp:Button ID="btnEdit" runat="server" Text="Edit Database" OnClick="btnEdit_Click" Visible="False"  CssClass="btn btn-info" />
                                         <!-- Logout Button -->
                                         <asp:Label ID="lblHelloUser" runat="server" Text="Hello, "></asp:Label>
-				                        <asp:Button ID="btnLogout" runat="server" Text="Logout" OnClick="btnLogout_Click" />
+				                        <asp:Button ID="btnLogout" runat="server" Text="Logout" OnClick="btnLogout_Click"  CssClass="btn btn-success" />
                                     </li>
                             </ul>
                     
@@ -87,68 +87,76 @@
         
             <!-- Home Title -->
         <section id="body">
-            <div id="Home_Title">
-                <h2><br /><br /><br /><br /><br /></h2>
-                <div id="banner">
-						<div class="container">
-							<div class="row row-no-gutters">
-								<div class="col-sm-8" >
+            <div class="container">
+                <h1><br /><br /><br /></h1>
+                <div id="Home_Title" class="row align-items">
+                
+                    <div class="col-lg-7">
+                        <img class="img-fluid rounded mb-4 mb-lg-0" src="images/izzystd.jpg" width="400" height="400" alt="">
+                      </div>
+                      <!-- /.col-lg-8 -->
+                      <div class="col-lg-5">
+                        <h1 class="font-weight-light">Welcome!</h1>
+                        <p>This is a template that is great for small businesses. It doesn't have too much fancy flare to it, but it makes a great use of the standard Bootstrap core components. Feel free to use this template for any project you want!</p>
+                        
+                      </div>
 
-									<!-- Banner Copy -->
-									<h1>Welcome!</h1>	
-                                    <p>This book will serve as your guide for your journey at Texas A&M University of Corpus Christi. Appreciate and uphold the traditions: you are now the keeper of the TAMU-CC legacy! That’s right, you can become a Tradition Keeper simply by taking part in the traditions listed in this book. Carry your book with pride and heed the call to keep our traditions alive. Your Islander Forever family is counting on you to remember its story and create one of your own. Use this book to commemorate your experiences along the way. Your future at the university by the sea awaits!</p>
-										
-							    </div>
-
-								
-								<div class="col-sm-4">
-
-									<!-- Banner Image -->
-										<a  class="rounded"><img src="images/izzystd.jpg" alt="" height="400" /></a>
-
-								</div>
-							</div>
-						</div>
-					</div>
+                
+                </div>
             </div>
-        </section>
-
-        <!-- Body section to have highlights of different sections -->
-        <!-- NOTE: For design, would like the divs to be side by side horizontal -->
-        <div id="Home_Body" class="container-fluid">
-            
-            <!-- Highlight Section 1 -->
-            <div id="Home_Body_Section1" class="text-body">
-                <img src="/images/IslanderLights.png" />
-				<asp:Label ID="lblHighlight1" runat="server" Text="[Text about first highlight]"></asp:Label>
-            </div>
-
-            <!-- Highlight Section 2 -->
-            <div id="Home_Body_Section2">
-                <img src="/images/IslanderLights.png" />
-				<asp:Label ID="lblHighlight2" runat="server" Text="[Text about second highlight]"></asp:Label>
-            </div>
-
-            <!-- Highlight Section 3 -->
-            <div id="Home_Body_Section3">
-                <img src="/images/IslanderLights.png" />
-				<asp:Label ID="lblHighlight3" runat="server" Text="[Text about third highlight]"></asp:Label>
-            </div>
-
-            <!-- Highlight Section 4 -->
-            <div id="Home_Body_Section4">
-                <img src="/images/IslanderLights.png" />
-				<asp:Label ID="lblHighlight4" runat="server" Text="[Text about fourth highlight]"></asp:Label>
-            </div>
+                <h1><br /><br /></h1>
+            <div class="row">
+                
+      <div class="col-md-4 mb-5">
+        <div class="card h-100">
+          <div class="card-body">
+            <h2 class="card-title">Card One</h2>
+            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem magni quas ex numquam, maxime minus quam molestias corporis quod, ea minima accusamus.</p>
+          </div>
+          <div class="card-footer">
+            <a href="#" class="btn btn-primary btn-sm">More Info</a>
+          </div>
         </div>
+      </div>
+      <!-- /.col-md-4 -->
+      <div class="col-md-4 mb-5">
+        <div class="card h-100">
+          <div class="card-body">
+            <h2 class="card-title">Card Two</h2>
+            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod tenetur ex natus at dolorem enim! Nesciunt pariatur voluptatem sunt quam eaque, vel, non in id dolore voluptates quos eligendi labore.</p>
+          </div>
+          <div class="card-footer">
+            <a href="#" class="btn btn-primary btn-sm">More Info</a>
+          </div>
+        </div>
+      </div>
+      <!-- /.col-md-4 -->
+      <div class="col-md-4 mb-5">
+        <div class="card h-100">
+          <div class="card-body">
+            <h2 class="card-title">Card Three</h2>
+            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem magni quas ex numquam, maxime minus quam molestias corporis quod, ea minima accusamus.</p>
+          </div>
+          <div class="card-footer">
+            <a href="#" class="btn btn-primary btn-sm">More Info</a>
+          </div>
+        </div>
+      </div>
+      <!-- /.col-md-4 -->
+
+    </div>
+        </section>
+        
+
+        
     	<asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:TraditionKeeperConnectionString %>" SelectCommand="SELECT * FROM [User]"></asp:SqlDataSource>
     </form>
     <footer class="page-footer font-small white pt-4" style="background-color:#0067C5">
         <div class="container text-center text-md-left">
             <div class="row">
                 <div class="col-md-6 mt-md-0 mt-3">
-                    <h5 class="text-uppercase">Footer Content</h5>
-                    <p>Use rows and columns</p>
+                    <h5 class="text-uppercase">Other Content</h5>
+                    <p>Links related to TAMUCC</p>
                 </div>
                 <hr class="clearfix w-100 d-md-none pb-3">
 
@@ -160,10 +168,10 @@
 
                 <ul class="list-unstyled">
                   <li>
-                    <a href="#!">Link 1</a>
+                    <a href="http://www.goislanders.com/?utm_source=footer&utm_campaign=tamucc.edu&utm_medium=islander_athletics">Islander Athletics</a>
                   </li>
                   <li>
-                    <a href="#!">Link 2</a>
+                    <a href="https://www.tamucc.edu/about/location/?utm_source=footer&utm_campaign=tamucc.edu&utm_medium=campus_map">Campus Map</a>
                   </li>
                 </ul>
                  
@@ -178,10 +186,10 @@
 
                 <ul class="list-unstyled">
                   <li>
-                    <a href="#!">Link 3</a>
+                    <a href="https://bb9.tamucc.edu/?utm_source=footer&utm_campaign=tamucc.edu&utm_medium=blackboard">BlackBoard</a>
                   </li>
                   <li>
-                    <a href="#!">Link 4</a>
+                    <a href="http://www.tamucc.edu/about/history.html?utm_source=footer&utm_campaign=tamucc.edu&utm_medium=history_of_the_university">History of the University</a>
                   </li>
                 </ul>
                   

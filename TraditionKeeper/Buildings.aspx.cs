@@ -13,5 +13,19 @@ namespace TraditionKeeper
 		{
 
 		}
+		protected void btnLogin_Click(object sender, EventArgs e)
+		{
+			Response.Redirect("Login.aspx");
+		}
+		protected void btnLogout_Click(object sender, EventArgs e)
+		{
+			Session["UserID"] = null;
+			Response.Redirect("Home.aspx");
+		}
+
+		protected void btnEdit_Click(object sender, EventArgs e)
+		{
+			Response.Redirect("Edit.aspx");
+		}
 	}
 }
