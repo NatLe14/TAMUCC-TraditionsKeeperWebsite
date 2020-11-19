@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data.SqlClient;
+using System.Configuration;
 
 namespace TraditionKeeper
 {
@@ -12,14 +13,17 @@ namespace TraditionKeeper
 	{
 		protected void Page_Load(object sender, EventArgs e)
 		{
+			// Check if the user is an admin to access this page
 			CheckAdmin();
 		}
 
+		// Exit button to exit page and return to Home page
 		protected void btnEditUsersExit_Click(object sender, EventArgs e)
 		{
 			Response.Redirect("Home.aspx");
 		}
 
+		// Insert label button to insert new information to database
 		protected void lbtnInsert_Click(object sender, EventArgs e)
 		{
 			SqlDataSource1.InsertParameters["USER_ANumber"].DefaultValue = ((TextBox)GridView1.FooterRow.FindControl("txtInsertANumber")).Text;
@@ -42,6 +46,7 @@ namespace TraditionKeeper
 			SqlDataSource1.Insert();
 		}
 
+		// Check if the user is an admin, if not, redirect the user to Login page to login or Home page if logged in
 		private void CheckAdmin()
 		{
 			if (Session["UserID"] == null)
@@ -50,7 +55,7 @@ namespace TraditionKeeper
 			}
 			else
 			{
-				SqlConnection con = new SqlConnection("Server=tcp:traditionkeeper.database.windows.net,1433;Initial Catalog=TraditionKeeper;Persist Security Info=False;User ID=TraditionAdmin;Password=IslanderForever!;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;");
+				SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["TKCS"].ConnectionString);
 				SqlCommand cmd = new SqlCommand("SELECT (USER_IsAdmin) FROM [User] WHERE USER_ID = @ID", con);
 				cmd.Parameters.AddWithValue("@ID", Session["UserID"]);
 				bool isAdmin;

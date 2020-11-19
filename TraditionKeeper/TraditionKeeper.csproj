@@ -85,11 +85,63 @@
     <Content Include="EditUsers.aspx" />
     <Content Include="History.aspx" />
     <Content Include="Home.aspx" />
+    <Content Include="images\buildinghome.jpg" />
+    <Content Include="images\buildings\bellLibrary.jpg" />
+    <Content Include="images\buildings\duganstadium.jpg" />
+    <Content Include="images\buildings\duganwellness.jpg" />
+    <Content Include="images\buildings\fergusonbuilding.jpg" />
+    <Content Include="images\buildings\garciaplaza.jpg" />
+    <Content Include="images\buildings\leehouse.jpg" />
+    <Content Include="images\buildings\leeplaza.jpg" />
+    <Content Include="images\buildings\oconnorbuilding.jpg" />
+    <Content Include="images\buildings\pac.jpg" />
+    <Content Include="images\buildings\samsplace.jpg" />
+    <Content Include="images\buildings\universitycenter.jpg" />
+    <Content Include="images\checkmark.png" />
     <Content Include="images\Default_Profile.PNG" />
+    <Content Include="images\historyhome.jpg" />
     <Content Include="images\IslanderLights.PNG" />
     <Content Include="images\izzystd.jpg" />
+    <Content Include="images\prizes\prize1_banner.png" />
+    <Content Include="images\prizes\prize2_waterbottle.png" />
+    <Content Include="images\prizes\prize3_flag.png" />
+    <Content Include="images\prizes\prize4_hoodie.png" />
+    <Content Include="images\prizes\prize5_medal.png" />
     <Content Include="images\TK_Logo.png" />
     <Content Include="images\TK_Logo_Transparent.png" />
+    <Content Include="images\traditionhome.jpg" />
+    <Content Include="images\traditions\anchorsaweigh.jpg" />
+    <Content Include="images\traditions\artmuseum.jpg" />
+    <Content Include="images\traditions\artshow.jpg" />
+    <Content Include="images\traditions\athleticsgame.jpg" />
+    <Content Include="images\traditions\bigevent.jpg" />
+    <Content Include="images\traditions\birthdayfiesta.jpg" />
+    <Content Include="images\traditions\blockparty.jpg" />
+    <Content Include="images\traditions\bluesdaytuesday.jpg" />
+    <Content Include="images\traditions\catalley.jpg" />
+    <Content Include="images\traditions\dancemarathon.jpg" />
+    <Content Include="images\traditions\deepend.jpg" />
+    <Content Include="images\traditions\fightsong.jpg" />
+    <Content Include="images\traditions\finalsfoot.jpg" />
+    <Content Include="images\traditions\heritagemonths.jpg" />
+    <Content Include="images\traditions\islanderlei.jpg" />
+    <Content Include="images\traditions\islanderlights.jpg" />
+    <Content Include="images\traditions\izzy.jpg" />
+    <Content Include="images\traditions\lightingofi.jpg" />
+    <Content Include="images\traditions\lnb.jpg" />
+    <Content Include="images\traditions\mariachi.jpg" />
+    <Content Include="images\traditions\momentumwave.jpg" />
+    <Content Include="images\traditions\orgfair.jpg" />
+    <Content Include="images\traditions\pac.jpg" />
+    <Content Include="images\traditions\paradeofnations.jpg" />
+    <Content Include="images\traditions\patiojam.jpg" />
+    <Content Include="images\traditions\presidentpicnic.jpg" />
+    <Content Include="images\traditions\ringwish.jpg" />
+    <Content Include="images\traditions\scholarship.jpg" />
+    <Content Include="images\traditions\shakaswoosh.jpg" />
+    <Content Include="images\traditions\theater.jpg" />
+    <Content Include="images\traditions\trail.jpg" />
+    <Content Include="images\traditions\universitybeach.jpg" />
     <Content Include="Login.aspx" />
     <Content Include="Prizes.aspx" />
     <Content Include="Profile.aspx" />
@@ -193,6 +245,7 @@
     <Content Include="Scripts\umd\popper.js" />
     <Content Include="Scripts\umd\popper.min.js" />
     <Content Include="Traditions.aspx" />
+    <Content Include="ViewImage.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -281,6 +334,13 @@
     <Compile Include="Traditions.aspx.designer.cs">
       <DependentUpon>Traditions.aspx</DependentUpon>
     </Compile>
+    <Compile Include="ViewImage.aspx.cs">
+      <DependentUpon>ViewImage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewImage.aspx.designer.cs">
+      <DependentUpon>ViewImage.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -308,6 +368,9 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="images\history\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

@@ -25,111 +25,115 @@
         <div class="container">
             <div class="navbar-header">
                 
-                    <nav class="navbar fixed-top justify-content-between" style="background-color:#0067C5">
-            
-                            <ul class="nav">
-                                <li  class="nav-item nav-link active"><a href="Home.aspx" class="text-white"><i class="fa fa-home"></i>Home</a></li>
+                    <nav class="navbar fixed-top " style="background-color:#0067C5">
+                                <a class="" href="Home.aspx">
+                                    <img src="images/TK_Logo_Transparent.png" class="" style="position:center; display:block; margin-left:10px;" width="150"  />
+                                </a>
+                            <ul class="nav align-content-end" style="position:absolute; left:12%;">
+                                <li  class="nav-item nav-link "><a href="Home.aspx" class="text-white"><i class="fa fa-home"></i>Home</a></li>
                                 <li  class="nav-item nav-link "><a href="Profile.aspx" class="text-white"><i class="fa fa-user"></i>Profile</a></li>
-                                <li  class="nav-item nav-link "><a href="Traditions.aspx"class="text-white">Traditions</a></li>
+                                <li  class="nav-item nav-link active"><a href="Traditions.aspx"class="text-white">Traditions</a></li>
                                 <li  class="nav-item nav-link "><a href="History.aspx"class="text-white">History</a></li>
                                 <li  class="nav-item nav-link "><a href="Buildings.aspx"class="text-white">Buildings</a></li>
                                 <li  class="nav-item nav-link "><a href="Prizes.aspx"class="text-white">Prizes</a></li>
+                                
                             </ul>
-
-                    <ul class="navbar-nav" >
-                       <li class="nav-item">
-                          <a class="navbar-brand px-lg-4 " href="Home.aspx">
-                             <img src="images/TK_Logo.png" class="img-thumbnail" style="align-content:center" width="150" height="75" />
-                          </a>
-                       </li>
-                    </ul>
-
-                            <ul class="navbar-nav justify-content-end">
-                                    <!-- Login area to have the Login Button and Logout Button and Edit Button for Admin use -->
-                                    <li class="nav-item"> 
-                                        <!-- Login Button -->
-        	                            <asp:Label ID="lblLogin" runat="server" Text="Click here to Login!" ></asp:Label>
-			                            <asp:Button ID="btnLogin" runat="server" OnClick="btnLogin_Click" Text="Login" CssClass="btn btn-success"/>
-                                    </li>
-                                    <li class="nav-item">
-                                        <!-- Edit Button -->
-					                    <asp:Button ID="btnEdit" runat="server" Text="Edit Database" OnClick="btnEdit_Click" Visible="False" />
+                            <ul class="nav">
+                                
+                            </ul>
+                            
+                        
+                            <div style="position:absolute; left:90%; top:15%;" >
+                                <asp:Label ID="lblHelloUser" runat="server" Text="Hello, " ForeColor="White"></asp:Label>
+                            </div>
+                            
+                            <div class="btn-group" style="position:absolute; left:90%; top:35%;">
                                         <!-- Logout Button -->
-                                        <asp:Label ID="lblHelloUser" runat="server" Text="Hello, "></asp:Label>
-				                        <asp:Button ID="btnLogout" runat="server" Text="Logout" OnClick="btnLogout_Click" />
-                                    </li>
-                            </ul>
-                    
+				                        <asp:Button ID="btnLogout" runat="server" Text="Logout" OnClick="btnLogout_Click" CssClass="btn btn-success"/>
+                                        <!-- Edit Button -->
+					                    <asp:Button ID="btnEdit" runat="server" Text="Edit Database" OnClick="btnEdit_Click" Visible="False" CssClass="btn btn-success"/>
+                                        <!-- Login Button -->
+        	                            <asp:Label ID="lblLogin" runat="server" Text="" ></asp:Label>
+			                            <asp:Button ID="btnLogin" runat="server" OnClick="btnLogin_Click" Text="Login" CssClass="btn btn-success"/>
+                            </div>
                     </nav>
                    </div>
-                
-
             </div>
-        
-
-        <!-- Header to include the Tradition Keeper Logo and Navigation between pages and User Logout button
-        <div id="Home_Header">
-            <!-- Tradition Keeper Logo 
-            <img src="/images/TK_Logo.png" width="400" height="300" />-->
-
-            <!-- Navigation Bar 
-            <nav id="nav">
-                <a href="Home.aspx">Home</a>
-                <a href="Profile.aspx">Profile</a>
-                <a href="Traditions.aspx">Traditions</a>
-                <a href="History.aspx">History</a>
-                <a href="Buildings.aspx">Buildings</a>
-                <a href="Prizes.aspx">Prizes</a>
-
-                
-            
-        </div>
         
         <!-- Home Title -->
         <section id="body">
-            <div id="Home_Title">
-                <h2><br /><br /><br /><br /><br /></h2>
-                <div id="banner">
-						<div class="container">
-							<div class="row row-no-gutters">
-								<div class="col-sm-8" >
+            <div class="container">
+                <h1><br /><br /><br /></h1>
+                <div id="Home_Title" class="row align-items">
+                
+                    <div class="col-lg-7">
+                        <img class="img-fluid rounded mb-4 mb-lg-0" src="images/izzystd.jpg" width="400" height="400" alt="" />
+                      </div>
+                      <!-- /.col-lg-8 -->
+                      <div class="col-lg-5">
+                        <h1 class="font-weight-light">Welcome!</h1>
+                        <br />
+                        <p>This website will serve as your guide for your journey at Texas A&M University of Corpus Christi.</p>
+                        <br />
+                        <p>Appreciate and uphold the traditions: you are now the keeper of the TAMU-CC legacy! That’s right, 
+                            you can become a Tradition Keeper simply by taking part in the traditions listed on this website. 
+                            Use this website with pride and heed the call to keep our campus traditions alive. Your Islander 
+                            Forever family is counting on you to remember it's story and create one of your own. Use this 
+                            website to commemorate your experiences along the way. Your future at the Island University awaits!</p>
+                        
+                      </div>
 
-									<!-- Banner Copy -->
-									<h1>Welcome!</h1>	
-                                    <p>This book will serve as your guide for your journey at Texas A&M University of Corpus Christi. Appreciate and uphold the traditions: you are now the keeper of the TAMU-CC legacy! That’s right, you can become a Tradition Keeper simply by taking part in the traditions listed in this book. Carry your book with pride and heed the call to keep our traditions alive. Your Islander Forever family is counting on you to remember its story and create one of your own. Use this book to commemorate your experiences along the way. Your future at the university by the sea awaits!</p>
-										
-							    </div>
+                
+                </div>
+            </div>
+                <h1><br /><br /></h1>
+            <div class="container-fluid">
+                <div class="row">
+                
+                      <div class="col-md-4 mb-5">
+                        <div class="card h-100">
+                          <div class="card-body">
+                            <h2 class="card-title">Islander Traditions</h2>
+                            <img src="images/traditionhome.jpg" style="width:100%; height:150px;"/>
+                          </div>
+                          <div class="card-footer">
+                            <p class="card-text" style="text-align:center">Come look at Islander Traditions here at the University</p>
+                            <a href="Traditions.aspx" class="btn btn-primary btn-sm">More Info</a>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- /.col-md-4 -->
+                      <div class="col-md-4 mb-5">
+                        <div class="card h-100">
+                          <div class="card-body">
+                            <h2 class="card-title">University History</h2>
+                              <img src="images/historyhome.jpg" style="width:150px; height:150px; margin-left:auto; margin-right:auto; display:block; border:1px solid black; padding:5px;"/>
+                            </div>
+                          <div class="card-footer">
+                            <p class="card-text" style="text-align:center">Go through the past of the Island</p>
+                            <a href="History.aspx" class="btn btn-primary btn-sm">More Info</a>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- /.col-md-4 -->
+                      <div class="col-md-4 mb-5">
+                        <div class="card h-100">
+                          <div class="card-body">
+                            <h2 class="card-title">Campus Buildings</h2>
+                              <img src="images/buildinghome.jpg" style="width:100%; height:150px;"/>
+                            </div>
+                          <div class="card-footer">
+                            <p class="card-text" style="text-align:center">Look at the buildings on Campus</p>
+                            <a href="Buildings.aspx" class="btn btn-primary btn-sm">More Info</a>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- /.col-md-4 -->
 
-								
-								<div class="col-sm-4">
-
-									<!-- Banner Image -->
-										<a  class="rounded"><img src="images/izzystd.jpg" alt="" height="400" /></a>
-
-								</div>
-							</div>
-						</div>
-					</div>
+                </div>
             </div>
         </section>
 
-        <!-- Body section to have highlights of different sections -->
-        <!-- NOTE: For design, would like the divs to be side by side horizontal -->
-        <div id="Home_Body" class="container-fluid">
-            
-            <!-- Highlight Section 1 -->
-            <div id="Home_Body_Section1" class="text-body">
-                <img src="/images/IslanderLights.png" />
-				<asp:Label ID="lblHighlight1" runat="server" Text="[Text about first highlight]"></asp:Label>
-            </div>
-
-            <!-- Highlight Section 2 -->
-            <div id="Home_Body_Section2">
-                <img src="/images/IslanderLights.png" />
-				<asp:Label ID="lblHighlight2" runat="server" Text="[Text about second highlight]"></asp:Label>
-            </div>
-
-        
     	<asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:TraditionKeeperConnectionString %>" SelectCommand="SELECT * FROM [User]"></asp:SqlDataSource>
     </form>
     <footer class="page-footer font-small white pt-4" style="background-color:#0067C5">
@@ -149,10 +153,10 @@
 
                 <ul class="list-unstyled">
                   <li>
-                    <a href="http://www.goislanders.com/?utm_source=footer&utm_campaign=tamucc.edu&utm_medium=islander_athletics">Islander Athletics</a>
+                    <a href="http://www.goislanders.com/?utm_source=footer&utm_campaign=tamucc.edu&utm_medium=islander_athletics" style="color:white">Islander Athletics</a>
                   </li>
                   <li>
-                    <a href="https://www.tamucc.edu/about/location/?utm_source=footer&utm_campaign=tamucc.edu&utm_medium=campus_map">Campus Map</a>
+                    <a href="https://www.tamucc.edu/about/location/?utm_source=footer&utm_campaign=tamucc.edu&utm_medium=campus_map" style="color:white">Campus Map</a>
                   </li>
                 </ul>
                  
@@ -167,10 +171,10 @@
 
                 <ul class="list-unstyled">
                   <li>
-                    <a href="https://bb9.tamucc.edu/?utm_source=footer&utm_campaign=tamucc.edu&utm_medium=blackboard">BlackBoard</a>
+                    <a href="https://bb9.tamucc.edu/?utm_source=footer&utm_campaign=tamucc.edu&utm_medium=blackboard" style="color:white">BlackBoard</a>
                   </li>
                   <li>
-                    <a href="http://www.tamucc.edu/about/history.html?utm_source=footer&utm_campaign=tamucc.edu&utm_medium=history_of_the_university">History of the University</a>
+                    <a href="https://sail.tamucc.edu/" style="color:white">TAMUCC SAIL</a>
                   </li>
                 </ul>
                   
@@ -186,7 +190,7 @@
 
           <!-- Copyright -->
           <div class="footer-copyright text-center py-3" style="background-color:#0257a6">© 2020 Copyright:
-            <a href="https://www.tamucc.edu/"> https://www.tamucc.edu</a>
+            <a href="https://www.tamucc.edu/" style="color:white"> https://www.tamucc.edu</a>
           </div>
           <!-- Copyright -->
     </footer>

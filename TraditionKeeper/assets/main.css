@@ -50,3 +50,23 @@
             font-size: 18px;
         }
 }
+
+/*.navbar-brand {
+    transform: translateX(-50%);
+    left: 50%;
+    position: relative;
+    top: 0%;
+    width: 200px;
+    
+    
+}*/
+
+.btn-group {
+    
+    float: right; /* Float the buttons side by side */
+}
+
+.landscape {
+    height: 30px;
+    width: 80px;
+}

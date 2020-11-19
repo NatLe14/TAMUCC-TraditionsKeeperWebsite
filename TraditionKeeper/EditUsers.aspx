@@ -11,11 +11,10 @@
 		<div id="EditUsers_Header">
 			<asp:Button ID="btnEditUsersExit" runat="server" Text="Exit" OnClick="btnEditUsersExit_Click" />
 			<br />
+			<br />
 		</div>
 
 		<!-- Body section that includes the main Users database table -->
-		<!-- ERROR: Updating doesn't work -->
-		<!-- ERROR: White space included on edit textboxes -->
         <div id="EditUsers_Body">
 			<asp:GridView ID="GridView1" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" BackColor="White" BorderColor="#999999" BorderStyle="None" BorderWidth="1px" CellPadding="3" DataKeyNames="USER_ID" DataSourceID="SqlDataSource1" GridLines="Vertical" ShowFooter="True">
 				<AlternatingRowStyle BackColor="#DCDCDC" />
@@ -125,10 +124,28 @@
 					</asp:TemplateField>
 					<asp:TemplateField HeaderText="USER_TraditionCount" SortExpression="USER_TraditionCount">
 						<EditItemTemplate>
-							<asp:DropDownList ID="DropDownList1" runat="server">
+							<asp:DropDownList ID="DropDownList1" runat="server" Text='<%# Bind("USER_TraditionCount") %>'>
 								<asp:ListItem>0</asp:ListItem>
 								<asp:ListItem>1</asp:ListItem>
 								<asp:ListItem>2</asp:ListItem>
+								<asp:ListItem>3</asp:ListItem>
+								<asp:ListItem>4</asp:ListItem>
+								<asp:ListItem>5</asp:ListItem>
+								<asp:ListItem>6</asp:ListItem>
+								<asp:ListItem>7</asp:ListItem>
+								<asp:ListItem>8</asp:ListItem>
+								<asp:ListItem>9</asp:ListItem>
+								<asp:ListItem>10</asp:ListItem>
+								<asp:ListItem>11</asp:ListItem>
+								<asp:ListItem>12</asp:ListItem>
+								<asp:ListItem>13</asp:ListItem>
+								<asp:ListItem>14</asp:ListItem>
+								<asp:ListItem>15</asp:ListItem>
+								<asp:ListItem>16</asp:ListItem>
+								<asp:ListItem>17</asp:ListItem>
+								<asp:ListItem>18</asp:ListItem>
+								<asp:ListItem>19</asp:ListItem>
+								<asp:ListItem>20</asp:ListItem>
 							</asp:DropDownList>
 							<asp:RequiredFieldValidator ID="rfvEditTradCount" runat="server" ErrorMessage="Tradition Count is required" ControlToValidate="DropDownList1" Text="*" ForeColor="Red"></asp:RequiredFieldValidator>
 						</EditItemTemplate>
@@ -140,6 +157,24 @@
 								<asp:ListItem>0</asp:ListItem>
 								<asp:ListItem>1</asp:ListItem>
 								<asp:ListItem>2</asp:ListItem>
+								<asp:ListItem>3</asp:ListItem>
+								<asp:ListItem>4</asp:ListItem>
+								<asp:ListItem>5</asp:ListItem>
+								<asp:ListItem>6</asp:ListItem>
+								<asp:ListItem>7</asp:ListItem>
+								<asp:ListItem>8</asp:ListItem>
+								<asp:ListItem>9</asp:ListItem>
+								<asp:ListItem>10</asp:ListItem>
+								<asp:ListItem>11</asp:ListItem>
+								<asp:ListItem>12</asp:ListItem>
+								<asp:ListItem>13</asp:ListItem>
+								<asp:ListItem>14</asp:ListItem>
+								<asp:ListItem>15</asp:ListItem>
+								<asp:ListItem>16</asp:ListItem>
+								<asp:ListItem>17</asp:ListItem>
+								<asp:ListItem>18</asp:ListItem>
+								<asp:ListItem>19</asp:ListItem>
+								<asp:ListItem>20</asp:ListItem>
 							</asp:DropDownList>
 							<asp:RequiredFieldValidator ValidationGroup="INSERT" ID="rfvInsertTradCount" runat="server" ErrorMessage="Tradition Count is required" ControlToValidate="ddlInsertTradCount" Text="*" ForeColor="Red"></asp:RequiredFieldValidator>
 						</FooterTemplate>
@@ -170,7 +205,12 @@
         </div>
 
 		<!-- Declaration of the SQL Datasource that includes Update, Insert, and Delete functionality -->
-    	<asp:SqlDataSource ID="SqlDataSource1" runat="server" ConflictDetection="CompareAllValues" ConnectionString="<%$ ConnectionStrings:TraditionKeeperConnectionString %>" DeleteCommand="DELETE FROM [User] WHERE [USER_ID] = @original_USER_ID AND [USER_ANumber] = @original_USER_ANumber AND [USER_Username] = @original_USER_Username AND [USER_Password] = @original_USER_Password AND [USER_FName] = @original_USER_FName AND [USER_LName] = @original_USER_LName AND [USER_Email] = @original_USER_Email AND [USER_Class] = @original_USER_Class AND [USER_TraditionCount] = @original_USER_TraditionCount AND [USER_IsAdmin] = @original_USER_IsAdmin" InsertCommand="INSERT INTO [User] ([USER_ANumber], [USER_Username], [USER_Password], [USER_FName], [USER_LName], [USER_Email], [USER_Class], [USER_TraditionCount], [USER_IsAdmin]) VALUES (@USER_ANumber, @USER_Username, @USER_Password, @USER_FName, @USER_LName, @USER_Email, @USER_Class, @USER_TraditionCount, @USER_IsAdmin)" OldValuesParameterFormatString="original_{0}" SelectCommand="SELECT * FROM [User]" UpdateCommand="UPDATE [User] SET [USER_ANumber] = @USER_ANumber, [USER_Username] = @USER_Username, [USER_Password] = @USER_Password, [USER_FName] = @USER_FName, [USER_LName] = @USER_LName, [USER_Email] = @USER_Email, [USER_Class] = @USER_Class, [USER_TraditionCount] = @USER_TraditionCount, [USER_IsAdmin] = @USER_IsAdmin WHERE [USER_ID] = @original_USER_ID AND [USER_ANumber] = @original_USER_ANumber AND [USER_Username] = @original_USER_Username AND [USER_Password] = @original_USER_Password AND [USER_FName] = @original_USER_FName AND [USER_LName] = @original_USER_LName AND [USER_Email] = @original_USER_Email AND [USER_Class] = @original_USER_Class AND [USER_TraditionCount] = @original_USER_TraditionCount AND [USER_IsAdmin] = @original_USER_IsAdmin">
+    	<asp:SqlDataSource ID="SqlDataSource1" runat="server" ConflictDetection="CompareAllValues" ConnectionString="<%$ ConnectionStrings:TraditionKeeperConnectionString %>" 
+			DeleteCommand="DELETE FROM [User] WHERE [USER_ID] = @original_USER_ID AND [USER_ANumber] = @original_USER_ANumber AND [USER_Username] = @original_USER_Username AND [USER_Password] = @original_USER_Password AND [USER_FName] = @original_USER_FName AND [USER_LName] = @original_USER_LName AND [USER_Email] = @original_USER_Email AND [USER_Class] = @original_USER_Class AND [USER_TraditionCount] = @original_USER_TraditionCount AND [USER_IsAdmin] = @original_USER_IsAdmin" 
+			InsertCommand="INSERT INTO [User] ([USER_ANumber], [USER_Username], [USER_Password], [USER_FName], [USER_LName], [USER_Email], [USER_Class], [USER_TraditionCount], [USER_IsAdmin]) VALUES (@USER_ANumber, @USER_Username, @USER_Password, @USER_FName, @USER_LName, @USER_Email, @USER_Class, @USER_TraditionCount, @USER_IsAdmin)" 
+			OldValuesParameterFormatString="original_{0}" 
+			SelectCommand="SELECT * FROM [User]" 
+			UpdateCommand="UPDATE [User] SET [USER_ANumber] = @USER_ANumber, [USER_Username] = @USER_Username, [USER_Password] = @USER_Password, [USER_FName] = @USER_FName, [USER_LName] = @USER_LName, [USER_Email] = @USER_Email, [USER_Class] = @USER_Class, [USER_TraditionCount] = @USER_TraditionCount, [USER_IsAdmin] = @USER_IsAdmin WHERE [USER_ID] = @original_USER_ID">
 			<DeleteParameters>
 				<asp:Parameter Name="original_USER_ID" Type="Int32" />
 				<asp:Parameter Name="original_USER_ANumber" Type="String" />
